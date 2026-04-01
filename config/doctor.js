@@ -4,13 +4,13 @@
 export const doctor = {
   nombre:        'Jorge Orquin',
   titulo:        'Gerontólogo · Médico Especialista',
-  matricula:     'MN 99.9999',
+  matricula:     '',
   ciudad:        'Buenos Aires',
   telefono:      '+54 11 2680-1454',
   whatsapp:      '541126801454',
   direccion:     'Chacabuco 351 entre Colón, Avellaneda y, B1722 Merlo, Provincia de Buenos Aires',
-  horarios:      'Lunes a Viernes 9–18 hs · Sábados 9–13 hs',
-  obrasSociales: ['PAMI', 'Swiss Medical', 'Galeno', 'IOMA', 'Medifé'],
+  horarios:      'Consultar disponibilidad',
+  obrasSociales: [],
 };
 
 export const servicios = [
@@ -23,13 +23,15 @@ export const servicios = [
     btnClase:   '',
     href:       '/contacto',
   },
+  /*
   {
     icono:      '🏠',
     colorClass: 'blue',
     titulo:     '¿Consulta a\ndomicilio?',
     descripcion:'Atención médica geriátrica en la comodidad de tu hogar. Agenda una visita hoy.',
-    btnTexto:   '🚗 Solicitar visita',
+    btnTexto:   '🚗 Solicitar visita ()',
     btnClase:   'outline',
     href:       '/contacto?tipo=domicilio',
   },
+  */
 ];
