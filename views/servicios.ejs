@@ -1,0 +1,23 @@
+<section class="servicios-section">
+
+  <div class="servicios-header">
+    <p class="servicios-eyebrow">Lo que ofrecemos</p>
+    <h2 class="servicios-titulo">Servicios del consultorio</h2>
+  </div>
+
+  <div class="cards-grid">
+    <% servicios.forEach(svc => { %>
+    <div class="hero-card">
+      <div class="card-icon <%= svc.colorClass %>"><%= svc.icono %></div>
+      <div class="card-title"><%- svc.titulo.replace('\n', '<br>') %></div>
+      <p class="card-body"><%= svc.descripcion %></p>
+      <a href="<%= svc.href %>"
+         class="card-btn <%= svc.btnClase %>"
+         <% if (svc.externo) { %>target="_blank" rel="noopener noreferrer"<% } %>>
+        <%= svc.btnTexto %>
+      </a>
+    </div>
+    <% }); %>
+  </div>
+
+</section>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. <%= doctor.nombre %> — <%= title %></title>
+  <meta name="description" content="Dr. <%= doctor.nombre %>, <%= doctor.titulo %>. <%= doctor.ciudad %>.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚕</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-brand">
+      <span class="name">Dr. <%= doctor.nombre %></span>
+      <span class="sub"><%= doctor.titulo %></span>
+    </div>
+    <div class="nav-links">
+      <a href="/"          class="<%= activePage === 'inicio'    ? 'active' : '' %>">INICIO</a>
+      <a href="/servicios" class="<%= activePage === 'servicios' ? 'active' : '' %>">SERVICIOS</a>
+      <a href="/contacto"  class="<%= activePage === 'contacto'  ? 'active' : '' %>">CONTACTO</a>
+    </div>
+  </nav>
+
+  <%- body %>
+
+  <section class="os-bar">
+    <% doctor.obrasSociales.forEach(os => { %>
+      <span class="os-tag"><%= os %></span>
+    <% }) %>
+    <span class="os-tag">+ Consulta particular</span>
+  </section>
+
+  <footer>
+    Dr. <%= doctor.nombre %> · <%= doctor.titulo %> · <%= doctor.matricula %> · <%= doctor.ciudad %>, Argentina · © <%= new Date().getFullYear() %>
+  </footer>
+
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

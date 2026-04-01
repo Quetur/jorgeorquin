@@ -1,0 +1,17 @@
+{
+  "name": "dr-orquin",
+  "version": "1.0.0",
+  "description": "Sitio web Dr. Jorge Orquin — Gerontólogo",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev":   "node --watch app.js"
+  },
+  "dependencies": {
+    "dotenv":     "^16.4.5",
+    "ejs":        "^3.1.10",
+    "express":    "^4.18.2",
+    "nodemailer": "^6.9.9"
+  }
+}
