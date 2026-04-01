@@ -9,7 +9,7 @@ export const doctor = {
   telefono:      '+54 11 2680-1454',
   whatsapp:      '541126801454',
   direccion:     'Chacabuco 351 entre Colón, Avellaneda y, B1722 Merlo, Provincia de Buenos Aires',
-  horarios:      'Consultar disponibilidad',
+  horarios:      'Para turnos consultar disponibilidad',
   obrasSociales: [],
 };
 
