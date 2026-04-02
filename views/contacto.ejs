@@ -5,15 +5,15 @@
   <div class="contact-wrap">
 
     <div class="map-box">
-      <iframe
-       src="https://www.google.com/maps?q=-34.669104,-58.722670&z=15&output=embed"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <img src="./img/mapamerlo.png" alt="Mapa de ubicación"
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
 
     <div class="contact-btns">
       <a href="https://wa.me/<%= doctor.whatsapp %>" target="_blank" class="big-btn btn-whatsapp">
-        <span class="btn-icon">💬</span>
+        <span class="btn-icon">
+          <img src="./img/whatsapp.gif" alt="WhatsApp" style="width: 2em; height: 2em; vertical-align: middle;">
+        </span>
         <span class="btn-text">
           <span class="btn-label">Escribinos al instante</span>
           <span class="btn-main">WHATSAPP DIRECTO</span>
@@ -28,9 +28,14 @@
         </span>
       </a>
       -->
-      <div class="info-row"><span class="info-icon">📍</span><span><%= doctor.direccion %></span></div>
-      <div class="info-row"><span class="info-icon">🕐</span><span><%= doctor.horarios %></span></div>
-      <div class="info-row"><span class="info-icon">🚗</span><span>Visitas domiciliaria solo con turno previo (NO EMERGENCIAS)</span></div>
+      <div class="info-row"><span class="info-icon">📍</span><span>
+          <%= doctor.direccion %>
+        </span></div>
+      <div class="info-row"><span class="info-icon">🕐</span><span>
+          <%= doctor.horarios %>
+        </span></div>
+      <div class="info-row"><span class="info-icon">🚗</span><span>Visitas domiciliaria solo con turno previo (NO
+          EMERGENCIAS)</span></div>
     </div>
 
   </div>
@@ -38,53 +43,57 @@
   <div class="form-wrap">
 
     <% if (success) { %>
-      <div class="alert alert-success">✅ ¡Mensaje enviado! Nos comunicaremos a la brevedad para confirmar tu turno.</div>
-    <% } %>
+      <div class="alert alert-success">✅ ¡Mensaje enviado! Nos comunicaremos a la brevedad para confirmar tu turno.
+      </div>
+      <% } %>
 
-    <% if (error) { %>
-      <div class="alert alert-error">⚠️ <%= error %></div>
-    <% } %>
+        <% if (error) { %>
+          <div class="alert alert-error">⚠️ <%= error %>
+          </div>
+          <% } %>
 
-    <% if (!success) { %>
-    <form action="/contacto" method="POST" novalidate>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="nombre">Nombre *</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-        </div>
-        <div class="form-field">
-          <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="telefono">Teléfono *</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="+54 11 ..." required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="tu@email.com">
-        </div>
-      </div>
-      <div class="form-field">
-        <label for="motivo">Motivo *</label>
-        <select id="motivo" name="motivo" required>
-          <option value="">Seleccioná una opción</option>
-          <option value="Primera consulta"     <%= tipo === 'primera'   ? 'selected' : '' %>>Primera consulta</option>
-          <option value="Consulta a domicilio" <%= tipo === 'domicilio' ? 'selected' : '' %>>Consulta a domicilio</option>
-          <option value="Control periódico">Control periódico</option>
-          <option value="Urgencia">Urgencia</option>
-          <option value="Teleconsulta">Teleconsulta</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label for="mensaje">Mensaje (opcional)</label>
-        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos brevemente tu consulta..."></textarea>
-      </div>
-      <button type="submit" class="form-submit">✉️ &nbsp;Enviar Email</button>
-    </form>
-    <% } %>
+            <% if (!success) { %>
+              <form action="/contacto" method="POST" novalidate>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 11 ..." required>
+                  </div>
+                  <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com">
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="motivo">Motivo *</label>
+                  <select id="motivo" name="motivo" required>
+                    <option value="">Seleccioná una opción</option>
+                    <option value="Primera consulta" <%=tipo==='primera' ? 'selected' : '' %>>Primera consulta</option>
+                    <option value="Consulta a domicilio" <%=tipo==='domicilio' ? 'selected' : '' %>>Consulta a domicilio
+                    </option>
+                    <option value="Control periódico">Control periódico</option>
+                    <option value="Urgencia">Urgencia</option>
+                    <option value="Teleconsulta">Teleconsulta</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="mensaje">Mensaje (opcional)</label>
+                  <textarea id="mensaje" name="mensaje" rows="3"
+                    placeholder="Contanos brevemente tu consulta..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">✉️ &nbsp;Enviar Email</button>
+              </form>
+              <% } %>
 
   </div>
 
