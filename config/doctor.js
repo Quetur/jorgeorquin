@@ -23,15 +23,13 @@ export const servicios = [
     btnClase:   '',
     href:       '/contacto',
   },
-  /*
   {
-    icono:      '🏠',
+    icono:      '📱',
     colorClass: 'blue',
-    titulo:     '¿Consulta a\ndomicilio?',
-    descripcion:'Atención médica geriátrica en la comodidad de tu hogar. Agenda una visita hoy.',
-    btnTexto:   '🚗 Solicitar visita ()',
+    titulo:     '¿Necesita una\nVideo llamada?',
+    descripcion:'Atención médica en la comodidad de tu hogar. Mediante un Celular.',
+    btnTexto:   '📱 Solicitar video llamada',
     btnClase:   'outline',
     href:       '/contacto?tipo=domicilio',
   },
-  */
 ];

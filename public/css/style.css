@@ -10,10 +10,10 @@
   --glass:        rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
-
+ 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
+ 
 body {
   background-color: var(--navy-bg);
   color: var(--white);
@@ -21,9 +21,9 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+ 
 a { text-decoration: none; color: inherit; }
-
+ 
 /* ════════════════════════════════════════
    NAV
 ════════════════════════════════════════ */
@@ -38,10 +38,10 @@ nav {
   background: var(--navy-bg);
   z-index: 100;
 }
-
+ 
 .nav-brand .name { font-weight: 800; font-size: 22px; display: block; }
 .nav-brand .sub  { font-size: 12px; color: var(--text-muted); text-transform: uppercase; }
-
+ 
 .nav-links { display: flex; gap: 20px; align-items: center; }
 .nav-links a {
   text-decoration: none;
@@ -56,7 +56,7 @@ nav {
   color: var(--accent-green);
   background: var(--glass);
 }
-
+ 
 /* ════════════════════════════════════════
    HOME — SECCIÓN PRINCIPAL
 ════════════════════════════════════════ */
@@ -66,7 +66,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
 }
-
+ 
 .content-column {
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ nav {
   gap: 25px;
   padding: 40px 5%;
 }
-
+ 
 .block-blue {
   background: var(--glass);
   backdrop-filter: blur(12px);
@@ -84,18 +84,18 @@ nav {
   padding: 35px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
-
+ 
 .block-blue h2 { font-size: 28px; font-weight: 800; margin-bottom: 15px; }
 .block-blue h3 { color: var(--accent-green); font-size: 16px; text-transform: uppercase; margin-bottom: 8px; }
 .block-blue p  { color: var(--text-muted); }
-
+ 
 .doctor-bg {
   background: url('/img/jorge.png') no-repeat center top / cover;
   mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%);
   min-height: 400px;
 }
-
+ 
 /* ════════════════════════════════════════
    OBRAS SOCIALES
 ════════════════════════════════════════ */
@@ -109,7 +109,7 @@ nav {
   position: relative;
   z-index: 20;
 }
-
+ 
 .os-tag {
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--glass-border);
@@ -119,7 +119,7 @@ nav {
   font-size: 13px;
   font-weight: 600;
 }
-
+ 
 /* ════════════════════════════════════════
    FOOTER
 ════════════════════════════════════════ */
@@ -130,22 +130,22 @@ footer {
   color: var(--text-muted);
   background: var(--navy-dark);
 }
-
+ 
 /* ════════════════════════════════════════
    SERVICIOS — CARDS COMPLETAS
 ════════════════════════════════════════ */
-
+ 
 .servicios-section {
   background: var(--navy-dark);
   padding: 60px 5%;
   min-height: calc(100vh - 160px);
 }
-
+ 
 .servicios-header { 
   text-align: center; 
   margin-bottom: 40px; 
 }
-
+ 
 .servicios-eyebrow {
   font-size: 12px; 
   font-weight: 700; 
@@ -154,21 +154,22 @@ footer {
   color: var(--accent-green); 
   margin-bottom: 8px;
 }
-
+ 
 .servicios-titulo { 
   font-size: 28px; 
   font-weight: 800; 
   color: var(--white); 
 }
-
+ 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 380px));
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
+  justify-content: center;
 }
-
+ 
 /* Estructura de la Card */
 .hero-card {
   background: var(--navy-bg);
@@ -182,13 +183,13 @@ footer {
   cursor: pointer;
   height: 100%; /* Para que todas midan lo mismo en la fila */
 }
-
+ 
 .hero-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.4);
   border-color: rgba(255, 255, 255, 0.2);
 }
-
+ 
 /* Iconos */
 .card-icon {
   width: 52px; 
@@ -200,11 +201,11 @@ footer {
   font-size: 24px; 
   margin-bottom: 16px;
 }
-
+ 
 .card-icon.green { background: rgba(93,212,160,0.2); }
 .card-icon.blue  { background: rgba(93,149,212,0.2); }
 .card-icon.red   { background: rgba(255,90,90,0.15); }
-
+ 
 /* Textos */
 .card-title {
   font-size: 18px; 
@@ -214,7 +215,7 @@ footer {
   text-transform: uppercase;
   color: var(--white);
 }
-
+ 
 .card-body {
   font-size: 13px; 
   color: var(--text-muted);
@@ -222,7 +223,7 @@ footer {
   flex: 1; /* Ocupa el espacio disponible empujando el botón hacia abajo */
   margin-bottom: 20px;
 }
-
+ 
 /* Botón (Alineado a la derecha) */
 .card-btn {
   display: inline-flex; 
@@ -243,38 +244,38 @@ footer {
   margin-top: auto;      /* Asegura que esté siempre al fondo de la card */
   width: fit-content;
 }
-
+ 
 .card-btn:hover { 
   opacity: 0.85; 
   transform: translateY(-1px); 
 }
-
+ 
 /* Variantes del botón */
 .card-btn.outline {
   background: transparent;
   color: var(--accent-green);
   border: 2px solid var(--accent-green);
 }
-
+ 
 .card-btn.outline:hover { 
   background: rgba(93,212,160,0.1); 
 }
-
+ 
 /* Clase para el botón rojo de emergencia */
 .card-btn.danger { 
   background: #C0392B; 
   color: white; 
 }
-
+ 
 /* Responsive */
 @media (max-width: 900px) {
   .cards-grid { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 @media (max-width: 600px) {
   .cards-grid { grid-template-columns: 1fr; }
 }
-
+ 
 /* ════════════════════════════════════════
    CONTACTO
 ════════════════════════════════════════ */
@@ -283,7 +284,7 @@ footer {
   padding: 0 0 40px;
   min-height: calc(100vh - 160px);
 }
-
+ 
 .section-title {
   text-align: center;
   font-size: 22px; font-weight: 900;
@@ -296,7 +297,7 @@ footer {
   padding-bottom: 6px;
   border-bottom: 3px solid var(--accent-green);
 }
-
+ 
 .contact-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -306,16 +307,16 @@ footer {
   padding: 0 24px 28px;
   align-items: start;
 }
-
+ 
 .map-box {
   border-radius: 14px; overflow: hidden;
   border: 2px solid var(--glass-border);
   height: 220px;
 }
 .map-box iframe { width: 100%; height: 100%; border: none; display: block; }
-
+ 
 .contact-btns { display: flex; flex-direction: column; gap: 12px; }
-
+ 
 .big-btn {
   display: flex; align-items: center; gap: 14px;
   padding: 16px 20px; border-radius: 12px;
@@ -326,7 +327,7 @@ footer {
   transition: transform 0.2s;
 }
 .big-btn:hover { transform: translateY(-2px); }
-
+ 
 .btn-icon {
   width: 40px; height: 40px; border-radius: 10px;
   background: rgba(255,255,255,0.2);
@@ -336,7 +337,7 @@ footer {
 .btn-text  { display: flex; flex-direction: column; }
 .btn-label { font-size: 11px; font-weight: 600; opacity: 0.75; }
 .btn-main  { font-size: 15px; font-weight: 900; }
-
+ 
 .btn-whatsapp {
   background: #25D366; color: white;
   box-shadow: 0 4px 16px rgba(37,211,102,0.3);
@@ -345,12 +346,12 @@ footer {
   background: #2E7D5E; color: white;
   box-shadow: 0 4px 16px rgba(46,125,94,0.3);
 }
-
+ 
 .info-row {
   display: flex; align-items: flex-start; gap: 10px;
   font-size: 13px; color: var(--text-muted); padding: 4px 0;
 }
-
+ 
 /* Alertas */
 .alert {
   max-width: 900px; margin: 0 auto 20px;
@@ -367,32 +368,32 @@ footer {
   border: 1px solid rgba(255,90,90,0.3);
   color: #ff8080;
 }
-
+ 
 /* Formulario */
 .form-contacto {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 24px 32px;
 }
-
+ 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-bottom: 14px;
 }
-
+ 
 .form-field {
   display: flex; flex-direction: column;
   gap: 6px; margin-bottom: 14px;
 }
-
+ 
 .form-field label {
   font-size: 11px; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.5px;
   color: var(--text-muted);
 }
-
+ 
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -411,7 +412,7 @@ footer {
 .form-field textarea:focus { border-color: var(--accent-green); }
 .form-field select option   { background: var(--navy-dark); }
 .form-field textarea        { resize: vertical; min-height: 80px; }
-
+ 
 .form-submit {
   background: var(--accent-green);
   color: var(--navy-dark);
@@ -423,7 +424,7 @@ footer {
   transition: opacity 0.2s, transform 0.2s;
 }
 .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
-
+ 
 /* ════════════════════════════════════════
    404
 ════════════════════════════════════════ */
@@ -438,7 +439,7 @@ footer {
   font-size: 80px; font-weight: 800;
   color: var(--accent-green); line-height: 1;
 }
-
+ 
 /* ════════════════════════════════════════
    TABLET  (≤ 900px)
 ════════════════════════════════════════ */
@@ -447,7 +448,7 @@ footer {
   .nav-brand .name { font-size: 17px; }
   .nav-brand .sub  { font-size: 10px; }
   .nav-links a     { font-size: 11px; padding: 6px 10px; }
-
+ 
   .main-layout {
     min-height: calc(100vh - 120px);
     grid-template-columns: 55% 45%;
@@ -458,17 +459,17 @@ footer {
   .block-blue h3  { font-size: 13px; }
   .block-blue p   { font-size: 13px; }
   .doctor-bg      { min-height: 300px; }
-
+ 
   .cards-grid   { grid-template-columns: 1fr 1fr; }
   .contact-wrap { grid-template-columns: 1fr; }
   .form-row     { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 /* ════════════════════════════════════════
    MOBILE  (≤ 600px)
 ════════════════════════════════════════ */
 @media (max-width: 600px) {
-
+ 
   /* Nav: nombre + links en una línea compacta */
   nav {
     height: auto;
@@ -495,7 +496,7 @@ footer {
     color: var(--text-muted);
     font-weight: 400;
   }
-
+ 
   /* Hero: columna única vertical */
   .main-layout {
     grid-template-columns: 1fr;
@@ -506,10 +507,10 @@ footer {
     padding: 32px 20px 28px;
     gap: 0;
   }
-
+ 
   /* Ocultar el div de background */
   .doctor-bg { display: none; }
-
+ 
   /* Foto circular con glow verde */
   .content-column {
     width: 100%;
@@ -519,7 +520,7 @@ footer {
     gap: 0;
     padding: 0;
   }
-
+ 
   /* El círculo con la foto va antes del card */
   .content-column::before {
     content: '';
@@ -535,7 +536,7 @@ footer {
     margin-bottom: 32px;
     flex-shrink: 0;
   }
-
+ 
   /* Card de texto: texto centrado */
   .block-blue {
     background: rgba(255,255,255,0.05);
@@ -548,7 +549,7 @@ footer {
     width: 100%;
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   }
-
+ 
   .block-blue h3 {
     font-size: 11px;
     letter-spacing: 2.5px;
@@ -564,7 +565,7 @@ footer {
     line-height: 1.65;
     color: var(--text-muted);
   }
-
+ 
   .os-bar {
     padding: 20px 16px;
     gap: 8px;
@@ -573,18 +574,18 @@ footer {
     font-size: 12px;
     padding: 5px 14px;
   }
-
+ 
   footer {
     font-size: 11px;
     padding: 18px 16px;
     line-height: 1.6;
   }
-
+ 
   /* Servicios */
   .servicios-section { padding: 40px 16px; min-height: auto; }
   .cards-grid        { grid-template-columns: 1fr; gap: 14px; }
   .hero-card         { padding: 22px 20px; }
-
+ 
   /* Contacto */
   .contact-wrap  { grid-template-columns: 1fr; padding: 0 16px 20px; }
   .map-box       { height: 180px; }
